@@ -25,7 +25,7 @@ jobs:
           # Clone into a temporary directory to avoid overwriting
           # any existing github directory.
           pushd $(mktemp -d) &>/dev/null
-          git clone --single-branch --depth 1 "https://github.com/orgboardtesting/test1/.github" && cd .github/scripts
+          git clone --single-branch --depth 1 "https://github.com/kata-containers/.github" && cd .github/scripts
           sudo install hub-util.sh /usr/local/bin
           popd &>/dev/null
 
