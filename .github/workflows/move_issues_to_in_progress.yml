@@ -50,7 +50,7 @@ jobs:
             exit 1
           }
 
-          project_name="Issue backlog"
+          project_name="Org Board"
           project_type="org"
           project_column="In progress"
 
