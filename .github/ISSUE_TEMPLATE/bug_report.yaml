@@ -3,60 +3,68 @@ description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - octocat
+  - mohanboddu 
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
-    validations:
-      required: true
   - type: dropdown
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Podman Version
+      description: What version of our podman are you running?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 4.3 (Default)
+        - 4.2
     validations:
       required: true
   - type: dropdown
-    id: browsers
+    id: os
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
+      label: Operating System 
+      description: What operating system are you using?
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
+        - Fedora (Default)
+        - CentOS
+        - RHEL
+        - Ubuntu
+        - Arch
+        - MacOS
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: arch 
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: Architecture 
+      description: What architecture are you using to run podman?
+      options:
+        - x86_64 (Default)
+        - aarch64
+        - power
+        - s390x
+    validations:
+      required: true
   - type: checkboxes
-    id: terms
+    id: podman_in_a_container 
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Podman in a container 
+      description: Please check the box if you are running podman in a container
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: Running podman in a container
           required: true
+  - type: textarea
+    id: description 
+    attributes:
+      label: Issue Description
+      description: Please explain your issue
+      value: "Description of the issue"
+    validations:
+      required: true
+  - type: textarea
+    id: podman_info
+    attributes:
+      label: podman info output
+      description: Please copy and paste podman info output.
+      render: shell
