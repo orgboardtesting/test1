@@ -53,7 +53,6 @@ body:
       description: Please check the box if you are running podman in a container
       options:
         - label: Running podman in a container
-          required: true
   - type: textarea
     id: description 
     attributes:
