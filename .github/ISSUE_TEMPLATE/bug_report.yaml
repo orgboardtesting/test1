@@ -103,6 +103,7 @@ body:
     attributes:
       label: Issue Description
       description: Please explain your issue
+      placeholder: Tell us what you see!
       value: "Description of the issue"
     validations:
       required: true
@@ -111,6 +112,7 @@ body:
     attributes:
       label: Steps to reproduce the issue:
       description: Please explain the steps to reproduce the issue
+      placeholder: Tell us what you see!
       value: "Steps to reproduce the issue"
     validations:
       required: true
@@ -119,6 +121,7 @@ body:
     attributes:
       label: Describe the results you received:
       description: Please explain the results you are noticing
+      placeholder: Tell us what you see!
       value: "Describe the results you received"
     validations:
       required: true
@@ -127,6 +130,7 @@ body:
     attributes:
       label: Describe the results you expected:
       description: Please explain the results you are expecting
+      placeholder: Tell us what you see!
       value: "Describe the results you expected"
     validations:
       required: true
@@ -135,4 +139,5 @@ body:
     attributes:
       label: podman info output
       description: Please copy and paste podman info output.
+      placeholder: Tell us what you see!
       render: shell
