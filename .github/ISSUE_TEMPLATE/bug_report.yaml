@@ -111,7 +111,7 @@ body:
     attributes:
       label: Steps to reproduce the issue
       description: Please explain the steps to reproduce the issue
-      value: "Steps to reproduce the issue"
+      value: "Steps to reproduce the issue\n1.\n2.\n3.\n"
     validations:
       required: true
   - type: textarea
