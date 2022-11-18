@@ -74,7 +74,7 @@ body:
     id: podman_in_a_container 
     attributes:
       label: Podman in a container 
-      description: Please select **Yes** if you are running podman in a container
+      description: Please select Yes if you are running podman in a container
       options:
         - No
         - Yes
