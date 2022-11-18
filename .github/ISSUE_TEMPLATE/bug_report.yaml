@@ -76,8 +76,8 @@ body:
       label: Podman in a container 
       description: Please select Yes if you are running podman in a container
       options:
-        - No
-        - Yes
+        - 'No'
+        - 'Yes'
     validations:
       required: true
   - type: dropdown
@@ -94,8 +94,8 @@ body:
       label: Upstream Latest Release
       description: Have you tried running the [latest upstream release](https://github.com/containers/podman/releases/latest)
       options:
-        - Yes
-        - No
+        - 'Yes'
+        - 'No'
     validations:
       required: true
   - type: textarea
