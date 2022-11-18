@@ -15,23 +15,47 @@ body:
       label: Podman Version
       description: What version of our podman are you running?
       options:
-        - 4.3 (Default)
+        - main
+        - 4.3
         - 4.2
+        - 4.1
+        - 4.0
+        - 3.4
+        - 3.3
+        - 3.2
+        - 3.1
+        - 3.0
+        - Other
     validations:
       required: true
+  - type: input
+    id: full_version
+    attributes:
+      label: Full Version
+      description: Please enter the full version
+    validations:
+      required: false
   - type: dropdown
     id: os
     attributes:
       label: Operating System 
       description: What operating system are you using?
       options:
-        - Fedora (Default)
+        - Fedora
         - CentOS
         - RHEL
         - Ubuntu
         - Arch
         - MacOS
         - Windows
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: Operating System Version
+      description: Please enter your Operating System Version
     validations:
       required: true
   - type: dropdown
@@ -46,19 +70,64 @@ body:
         - s390x
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: podman_in_a_container 
     attributes:
       label: Podman in a container 
-      description: Please check the box if you are running podman in a container
+      description: Please select **Yes** if you are running podman in a container
       options:
-        - label: Running podman in a container
+        - No
+        - Yes
+    validations:
+      required: true
+  - type: dropdown
+    id: privileged_rootless
+    attributes:
+      label: Privileged Or Rootless
+      description: Are you running the containers as privileged or non-root user?
+      options:
+        - Privileged
+        - Rootless
+  - type: dropdown
+    id: upstream_latest
+    attributes:
+      label: Upstream Latest Release
+      description: Have you tried running the [latest upstream release](https://github.com/containers/podman/releases/latest)
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
   - type: textarea
-    id: description 
+    id: description
     attributes:
       label: Issue Description
       description: Please explain your issue
       value: "Description of the issue"
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Steps to reproduce the issue:
+      description: Please explain the steps to reproduce the issue
+      value: "Steps to reproduce the issue"
+    validations:
+      required: true
+  - type: textarea
+    id: received_results
+    attributes:
+      label: Describe the results you received:
+      description: Please explain the results you are noticing
+      value: "Describe the results you received"
+    validations:
+      required: true
+  - type: textarea
+    id: expected_results
+    attributes:
+      label: Describe the results you expected:
+      description: Please explain the results you are expecting
+      value: "Describe the results you expected"
     validations:
       required: true
   - type: textarea
