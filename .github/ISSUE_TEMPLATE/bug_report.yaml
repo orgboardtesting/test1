@@ -15,6 +15,11 @@ body:
         Also, there is a running list of known issues in the [Podman Troubleshooting Guide](https://github.com/containers/podman/blob/main/troubleshooting.md), please reference that page before opening a new issue.
         
         If you are filing a bug against `podman build`, please instead file a bug against Buildah (https://github.com/containers/buildah/issues). Podman build executes Buildah to perform container builds, and as such the Buildah maintainers are best equipped to handle these bugs.
+
+        Commands you might need to run to create the issue
+          $ podman version
+          $ podman info
+          $ rpm -q podman
   - type: dropdown
     id: podman_version
     attributes:
